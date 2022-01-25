@@ -27,11 +27,11 @@ height: 100%;
 }
 
 .user-handle {
-    color:gray;
+    color:white;
 }
 
 .tweet-date {
-    color:gray
+    color:white
 }
 
 .tweet-container{
@@ -40,11 +40,13 @@ height: 100%;
 }
 
 .background-red {
-    background-color: red;
-    color:white;
+    background-color: #f44336;
 }
 
 .background-green {
-    background-color: green;
-    color:white;
+    background-color: #4caf50;
+}
+
+.search-area {
+    margin-bottom: 1rem;
 }
