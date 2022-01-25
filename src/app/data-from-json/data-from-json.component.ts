@@ -30,4 +30,9 @@ export class DataFromJsonComponent implements OnInit {
     });
   }
 
+  //A method to check for words, where we have an index number as parameter, so we choose the correct tweet, when we target tweets on the index no.
+  checkForWord(indexNo:number): boolean {
+    return this.tweets[indexNo].text.includes('American');
+  }
+
 }

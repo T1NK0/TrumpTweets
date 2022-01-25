@@ -38,3 +38,13 @@ height: 100%;
     border-bottom: 1px solid gray;
     padding: 1rem;
 }
+
+.background-red {
+    background-color: red;
+    color:white;
+}
+
+.background-green {
+    background-color: green;
+    color:white;
+}

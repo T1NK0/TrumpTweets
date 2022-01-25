@@ -1,27 +1,28 @@
-
-    <div class="tweet-feed" *ngFor="let tweet of tweets">
-        <div class="tweet-container row">
-          <div style="float:left;" class="col-2 col-sm-1 col-md-1 col-lg-1">
-            <div class="profile-picture-frame">
-                <img src="{{profilePicture}}" class="rounded-circle profile-picture">
-            </div>
-          </div>
-            <div class="post col-10 col-sm-11 col-md-11 col-lg-11" style="float:right;">
-              <div class="post-heading col-lg-12">
-                <p class="post-heading-text user-name">{{userName}}</p>
-                <p class="post-heading-text user-handle">{{userHandle}}</p>
-                <p class="post-heading-text tweet-date">&#8226;</p>
-                <p class="post-heading-text tweet-date">{{tweet.date|date}}</p>
-              </div>
-                <div class="post-text">
-                  <p>{{tweet.text}}</p>
-                </div>
-                <div class="post-likes">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" class="post-likes-inline">
-                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
-                  </svg>
-                  <p class="post-likes-inline">{{tweet.likes|number}}</p>
-                </div>
-            </div>
-        </div>
+<!-- Loop through all the tweets using tweet as the single target, ("Foreach tweet in tweets" basicly, and set an index.) -->
+<div class="tweet-feed" *ngFor="let tweet of tweets; index as i">
+  <!-- Add optional classes with the [ngClass], where we use our method checkForWord, with the index of the current tweet -->
+  <div class="tweet-container row" [ngClass]="{'background-green':checkForWord(i) == true, 'background-red':checkForWord(i) == false }" *ngIf="tweet.text.includes('our')">
+    <div style="float:left;" class="col-2 col-sm-1 col-md-1 col-lg-1">
+      <div class="profile-picture-frame">
+          <img src="{{profilePicture}}" class="rounded-circle profile-picture">
+      </div>
     </div>
+      <div class="post col-10 col-sm-11 col-md-11 col-lg-11" style="float:right;">
+        <div class="post-heading col-lg-12">
+          <p class="post-heading-text user-name">{{userName}}</p>
+          <p class="post-heading-text user-handle">{{userHandle}}</p>
+          <p class="post-heading-text tweet-date">&#8226;</p>
+          <p class="post-heading-text tweet-date">{{tweet.date|date}}</p>
+        </div>
+          <div class="post-text">
+            <p>{{tweet.text}}</p>
+          </div>
+          <div class="post-likes">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart" viewBox="0 0 16 16" class="post-likes-inline">
+              <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+            </svg>
+            <p class="post-likes-inline">{{tweet.likes|number}}</p>
+          </div>
+      </div>
+  </div>
+</div>
