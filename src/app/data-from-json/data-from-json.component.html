@@ -1,10 +1,12 @@
 
     <div class="tweet-feed" *ngFor="let tweet of tweets">
-        <div class="tweet-container">
+        <div class="tweet-container row">
+          <div style="float:left;" class="col-2 col-sm-1 col-md-1 col-lg-1">
             <div class="profile-picture-frame">
                 <img src="{{profilePicture}}" class="rounded-circle profile-picture">
             </div>
-            <div class="post">
+          </div>
+            <div class="post col-10 col-sm-11 col-md-11 col-lg-11" style="float:right;">
               <div class="post-heading col-lg-12">
                 <p class="post-heading-text user-name">{{userName}}</p>
                 <p class="post-heading-text user-handle">{{userHandle}}</p>
@@ -21,6 +23,5 @@
                   <p class="post-likes-inline">{{tweet.likes|number}}</p>
                 </div>
             </div>
-            <hr/>
         </div>
     </div>
