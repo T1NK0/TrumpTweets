@@ -1,5 +1,5 @@
 export interface Tweets {
-    date: Date,
+    date: string,
     likes: number,
     text: string
 }
