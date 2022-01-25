@@ -1,0 +1,41 @@
+.profile-picture {
+width: 100%;
+height: 100%;
+}
+
+.profile-picture-frame {
+    width:48px;
+    height:48px;
+}
+
+.post {
+    width:100%;
+    height:100%;
+    font-size:12px;
+}
+
+.post-header-info {
+    display: inline;
+}
+
+.post-likes-inline{
+    display: inline;
+    padding-right: 0.25rem;
+}
+
+.post-heading-text {
+    display: inline;
+    padding-right: 0.5rem;
+}
+
+.user-name {
+    font-weight: bold;
+}
+
+.user-handle {
+    color:gray;
+}
+
+.tweet-date {
+    color:gray
+}

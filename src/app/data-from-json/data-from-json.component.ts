@@ -16,7 +16,7 @@ export class DataFromJsonComponent implements OnInit {
   tweets: Tweets[] = [];
   userName:string = "Donald J. Trump";
   userHandle:string = "@realDonaldTrump";
-  profilePicture:string = "./assets/images/Donald_Trump_March_2015.jpg";
+  profilePicture:string = "./assets/images/donald-trump-g4f9b5a7a4_1920.jpg";
 
   constructor(private TweetsService: TrumpTweetsService) { }
 
