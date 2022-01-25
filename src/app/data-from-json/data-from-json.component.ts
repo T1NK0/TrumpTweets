@@ -14,10 +14,12 @@ export class DataFromJsonComponent implements OnInit {
 
   //Create our tweets array, set to the type of our interface Tweets.
   tweets: Tweets[] = [];
+  //my own printable variables made so it could be changed to other users if needed, and it therefor being dynamic.
   userName:string = "Donald J. Trump";
   userHandle:string = "@realDonaldTrump";
   profilePicture:string = "./assets/images/donald-trump-g4f9b5a7a4_1920.jpg";
 
+  //Sends our tweetsService down so we can use it in ngOnInit, as TweetService.
   constructor(private TweetsService: TrumpTweetsService) { }
 
   ngOnInit(): void {
