@@ -7,7 +7,7 @@
 <!-- Loop through all the tweets using tweet as the single target, ("Foreach tweet in tweets" basicly, and set an index.) -->
 <div class="tweet-feed" *ngFor="let tweet of tweets; index as i">
   <!-- Add optional classes with the [ngClass], where we use our method checkForWord, with the index of the current tweet. -->
-  <div class="tweet-container row" [ngClass]="{'background-green':checkForWord(i) == true, 'background-red':checkForWord(i) == false }" *ngIf="tweet.text.includes('our')">
+  <div class="tweet-container row" [ngClass]="{'background-green':checkForWord(i) == true, 'background-red':checkForWord(i) == false }" *ngIf="tweet.text.includes(userInput)">
     <div style="float:left;" class="col-2 col-sm-1 col-md-1 col-lg-1">
       <div class="profile-picture-frame">
           <img src="{{profilePicture}}" class="rounded-circle profile-picture">
